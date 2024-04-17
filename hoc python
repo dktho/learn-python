@@ -1,0 +1,24 @@
+Dưới đây là một chương trình Python để tìm tất cả các số nguyên tố nhỏ hơn 100:
+
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def find_primes(limit):
+    primes = []
+    for num in range(2, limit):
+        if is_prime(num):
+            primes.append(num)
+    return primes
+
+# Tìm và in ra tất cả số nguyên tố nhỏ hơn 100
+prime_numbers = find_primes(100)
+print(f"Các số nguyên tố nhỏ hơn 100 là: {prime_numbers}")
+```
+
+Chạy chương trình trên, bạn sẽ thấy danh sách các số nguyên tố từ 2 đến 97. 
